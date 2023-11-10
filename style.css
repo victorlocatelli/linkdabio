@@ -11,24 +11,20 @@
   --surface-color-hover: rgba(255, 255, 255, 0.2);
   --surface-border-color-hover: white;
   --switch-bg-url: url(./assets/moon-stars.svg);
-
 }
 
 .light {
   --text-color: black;
   --bg-url: url(./assets/bg-mobile-light.jpg);
   --stroke-color: rgba(0, 0, 0, 0.5);
-  --surface-color-hover: rgba(0, 0, 0, 0.089) ;
+  --surface-color-hover: rgba(0, 0, 0, 0.089);
   --surface-border-color-hover: black;
   --switch-bg-url: url(./assets/sun.svg);
-
 }
-
-
-
 
 body {
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -67,35 +63,33 @@ body * {
 }
 
 #switch button {
-width: 32px;
-height: 32px;
-background: white var(--switch-bg-url) no-repeat center;
-border: 0;
-border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
 
-position: absolute;
-top: 50%;
-left: 0;
-z-index: 1;
-transform:translateY(-50%) ;
-
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
 }
 
 .light #switch button {
-  right:0;
+  right: 0;
   left: initial;
 }
 
 #switch span {
-display: block;
-width: 64px;
-height: 24px;
-background: var(--surface-color-dark-mode);
-border: 1px solid var(--stroke-color);
-backdrop-filter: blur(4px);
-border-radius: 9999px;
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color-dark-mode);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  border-radius: 9999px;
 }
-
 
 /* links*/
 ul /*lista*/ {
@@ -130,16 +124,16 @@ ul li a:hover {
 
 /* social links */
 #social-links {
-justify-content: center;
-display: flex;
-padding: 24px 0;
-font-size: 24px;
+  justify-content: center;
+  display: flex;
+  padding: 24px 0;
+  font-size: 24px;
 }
 
 #social-links a {
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 16px;
 
   transition: background 0.2s;
@@ -147,14 +141,23 @@ font-size: 24px;
 }
 
 #social-links a:hover {
-  background:rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
   padding: 16px;
   border-radius: 50%;
-
 }
 
 footer {
   padding: 24 0px;
   text-align: center;
   font-size: 14px;
+}
+
+/*midia queries*/
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
